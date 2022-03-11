@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liang.mapper.BlogArticleMapper">
+    <resultMap type="com.liang.entity.BlogArticle" id="BlogArticleMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="articleheadpic" column="articleHeadPic" jdbcType="VARCHAR"/>
+        <result property="articlename" column="articleName" jdbcType="VARCHAR"/>
+        <result property="articletag" column="articleTag" jdbcType="VARCHAR"/>
+        <result property="articleremark" column="articleRemark" jdbcType="VARCHAR"/>
+        <result property="articlereadcount" column="articleReadCount" jdbcType="INTEGER"/>
+        <result property="articlestate" column="articleState" jdbcType="INTEGER"/>
+        <result property="managerid" column="managerId" jdbcType="INTEGER"/>
+        <result property="managername" column="managerName" jdbcType="VARCHAR"/>
+        <result property="articlecontent" column="articleContent" jdbcType="VARCHAR"/>
+        <result property="createtime" column="createTime" jdbcType="VARCHAR"/>
+        <result property="articletype" column="articleType" jdbcType="INTEGER"/>
+        <result property="articlestarnum" column="articleStarNum" jdbcType="INTEGER"/>
+        <result property="articleconnum" column="articleConNum" jdbcType="INTEGER"/>
+        <result property="enclosure" column="enclosure" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="BlogArticleMap">
+        select * from blog.blog_article
+    </select>
+
+</mapper>
